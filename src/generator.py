@@ -1,8 +1,8 @@
 import string
 import random as rd
-from typing import List, Any
 
-r = string.ascii_lowercase + string.ascii_uppercase + string.digits
+
+# r = string.ascii_lowercase + string.ascii_uppercase + string.digits
 
 
 def password_generator(length: int, number: int):
