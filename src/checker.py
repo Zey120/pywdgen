@@ -1,18 +1,18 @@
 # https://xposedornot.com/
-import json
 import urllib3
 from hasher import Keccak512
 
 
-# We can now control the number of todos we want to be returned.
-def check(password):
+def check(password, test=False):
     hashed_password = Keccak512(password)
-    print(hashed_password)
-    http = urllib3.PoolManager()
-    r = http.request("GET", f"https://passwords.xposedornot.com/api/v1/pass/anon/{hashed_password}")
-    print(r.data)
-    if r.data != b'{"Error":"Not found"}\n':
-        print(type(r.data))
+    https = urllib3.PoolManager()
+    r = https.request("GET", f"https://passwords.xposedornot.com/api/v1/pass/anon/{hashed_password}")
+
+    if r.data == b'{"Error":"Not found"}\n':
+        if test:
+            print("Is safe")
+        return True
+    else:
+        return False
 
 
-check("password")
