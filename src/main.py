@@ -1,4 +1,4 @@
-
-
+#!/usr/bin/env python
+from generator import password_generator
 if __name__ == '__main__':
-    pass
+    password_generator(10, 12)
