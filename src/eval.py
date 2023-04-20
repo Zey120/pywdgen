@@ -1,6 +1,7 @@
 import re
 
-def password_strength(password):
+
+def password_strength(password: str) -> int:
     score = 0
 
     # Longueur
@@ -30,4 +31,3 @@ def password_strength(password):
         score += 1
 
     return score
-
