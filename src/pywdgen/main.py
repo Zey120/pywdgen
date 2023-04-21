@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/bin/sh
+
 import argparse
 
 from generator import password_generator
