@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pywdgen"
-version = "0.0.1"
+version = "0.0.6"
 authors = [
-  { name="Hugo Camerola", email="hugo.camerola@example.com" },
+  { name="Aa", email="AA" },
 ]
 description = "A package that allows you to generate passwords and check their security"
 readme = "README.md"
@@ -20,3 +20,6 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/Zey120/pywdgen"
 "Bug Tracker" = "https://github.com/Zey120/pywdgen/issues"
+
+[project.scripts]
+pywdgen = "pywdgen:main"
